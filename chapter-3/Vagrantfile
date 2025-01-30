@@ -6,7 +6,7 @@ config.ssh.insert_key = false
     config.vm.define "app1" do |app|
         app.vm.hostname = "app1.dev"
         app.vm.provider :docker do |d|
-            d.build_dir = "./app1/Dockerfile" # Path to Dockerfile
+            d.build_dir = "./app1" # Path to Dockerfile
             d.remains_running = true
             d.has_ssh = true
             #custom network
@@ -18,7 +18,7 @@ config.ssh.insert_key = false
     config.vm.define "app2" do |app|
         app.vm.hostname = "app2.dev"
         app.vm.provider :docker do |d|
-            d.build_dir = "./app2/Dockerfile" # Path to Dockerfile
+            d.build_dir = "./app2" # Path to Dockerfile
             d.remains_running = true
             d.has_ssh = true
             #custom network
@@ -30,7 +30,7 @@ config.ssh.insert_key = false
     config.vm.define "db" do |db|
         db.vm.hostname = "db.dev"
         db.vm.provider :docker do |d|
-            d.build_dir = "./db/Dockerfile" # Path to Dockerfile
+            d.build_dir = "./db" # Path to Dockerfile
             d.remains_running = true
             d.has_ssh = true
             #custom network
