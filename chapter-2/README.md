@@ -4,3 +4,12 @@ The other tricky bit is that in order for systemd, the init implementation used 
 
 [text](https://dev.to/dholth/how-to-use-docker-instead-of-virtualbox-on-osx-without-changing-the-world-4ack)
 
+This command is the equivalent of running apt install ntp, but is much more intelligent; it will check if ntp is installed, and, if not, install it. This is the equivalent of the following shell script:
+
+```bash
+- if ! rpm -qa | grep -qw ntp; then
+- yum install ntp
+- fi
+```
+
+Ansible allows admins to run ad-hoc commands on one or hundreds of machines at the same time, using the ansible command
