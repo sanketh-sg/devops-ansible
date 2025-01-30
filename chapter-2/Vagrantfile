@@ -1,0 +1,11 @@
+Vagrant.configure("2") do |config|
+    config.vm.provider :docker do |d|
+        d.build_dir = "." # Path to Dockerfile
+        d.remains_running = true # Keep container running
+        d.has_ssh = true # Enable SSH
+
+    #Use Asnible to provision 
+    config.vm.provision "ansible" do |ansible|
+        ansible.playbook = "playbook.yml" # Path to playbook
+    end
+end
