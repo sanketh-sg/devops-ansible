@@ -10,7 +10,7 @@ config.ssh.insert_key = false
             d.remains_running = true
             d.has_ssh = true
             #custom network
-            d.create_args = ["--network", "nw-ansi", "--ip", "192.168.60.4"]
+            d.create_args = ["--privileged", "--network", "nw-ansi", "--ip", "192.168.60.4"]
         end
     end
 
@@ -22,7 +22,7 @@ config.ssh.insert_key = false
             d.remains_running = true
             d.has_ssh = true
             #custom network
-            d.create_args = ["--network", "nw-ansi", "--ip", "192.168.60.5"]
+            d.create_args = ["--privileged", "--network", "nw-ansi", "--ip", "192.168.60.5"]
         end
     end
 
@@ -34,7 +34,7 @@ config.ssh.insert_key = false
             d.remains_running = true
             d.has_ssh = true
             #custom network
-            d.create_args = ["--network", "nw-ansi", "--ip", "192.168.60.6"]
+            d.create_args = ["--privileged", "--network", "nw-ansi", "--ip", "192.168.60.6"]
         end
     end
 end
