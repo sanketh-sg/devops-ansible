@@ -36,6 +36,8 @@ ansible db -b -m ufw -a "rule=allow proto=tcp from=192.168.60.0/24 to=any port=3
 ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password USING PASSWORD('db-root');
 ansible db -b -m mysql_user -a "name=django host=% password=12345 priv=*.*:ALL state=present login_user=root login_password=db-root"
 ```
+modified vagrantfile to include --privileged option as installing ufw and setting up firewall rules require root permissions.
+
 --limit to filter single servers
 -m file  to create files and dictionaries
 
