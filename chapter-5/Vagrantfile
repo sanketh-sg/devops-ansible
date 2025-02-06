@@ -1,0 +1,16 @@
+Vagrant.configure("2") do |config|
+    config.ssh.insert_key = false
+    #no need to customize memory for docker
+    
+        # Application server 1
+        config.vm.define "app1" do |app|
+            app.vm.hostname = "app1.dev"
+            app.vm.provider :docker do |d|
+                d.build_dir = "./app1" # Path to Dockerfile
+                d.remains_running = true
+                d.has_ssh = true
+                #custom network
+                d.create_args = ["--privileged", "--network", "nw-ansi", "--ip", "192.168.60.4"]
+            end
+        end
+    end    

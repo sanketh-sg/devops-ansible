@@ -1,0 +1,14 @@
+{
+    "name": "ansible-node-app",
+    "version": "1.0.0",
+    "description": "Ansible Node App",
+    "author": {
+        "name": "Sanketh"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "engines": {
+        "node": ">= 10.0.0"
+    }
+}

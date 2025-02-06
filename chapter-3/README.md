@@ -6,7 +6,7 @@ I am using the docker images method here to get the image instead of building it
 I have set up a custom network in docker as docker provider does not support private network as in vbox
 
 ```console
-- docker network create --subnet 192.168.3.0/24 nw-ansi
+- docker network create --subnet 192.168.60.0/24 nw-ansi
 ```
 in Ansible group the servers into app and db which are merged to form a thord group called 'multi' and we run ansible cmds on this group.
 
