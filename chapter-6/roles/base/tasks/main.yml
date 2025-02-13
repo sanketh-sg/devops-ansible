@@ -1,0 +1,5 @@
+- name: Create user proton
+  user:
+    name: proton
+    state: present
+    
