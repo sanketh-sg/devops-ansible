@@ -30,3 +30,12 @@ also files folder to keep the files the tasks require
         └── tasks
             └── main.yml
 ```
+
+Host variables
+Lets say we have servers running different OS, Normally we need to set up different tasks for each OS type. Which includes redundant code. THis can be solved by using host variables.
+
+setup a folder host_vars which contains files named after each host(name/ip). Inside we define the variables for the host which can be refered in the play {{ host_var }}.
+
+Handler
+Can be used to handle the events as a seperate task.
+notify: handlername will notify a task with matching name inside handler folder.
